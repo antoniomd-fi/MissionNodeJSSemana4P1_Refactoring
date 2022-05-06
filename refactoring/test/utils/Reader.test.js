@@ -1,6 +1,6 @@
-const ReaderService = require('./../../lib/utils/Reader')
+const Reader = require('./../../lib/utils/Reader')
 
-describe ("Tests for ReaderService", () =>{
+describe ("Tests for Reader", () =>{
 
     test ("1.Read a JSON file" , ()=> {
         const explorer = {
@@ -14,7 +14,7 @@ describe ("Tests for ReaderService", () =>{
               "elm"
             ]
           }
-        const explorer2 = ReaderService.readJsonFile("explorers.json")
+        const explorer2 = Reader.readJsonFile("explorers.json")
         expect(explorer2[0].name).toBe(explorer.name)
         expect(explorer2[0].githubUsername).toBe(explorer.githubUsername)
         expect(explorer2[0].score).toBe(explorer.score)
