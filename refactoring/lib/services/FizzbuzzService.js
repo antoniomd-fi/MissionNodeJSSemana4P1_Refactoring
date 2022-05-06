@@ -1,17 +1,20 @@
 class FizzbuzzService{
     static applyValidationInExplorer(explore){
-        if (explore.score%3==0){
-            explore.assign(trick,"FIZZ")
+        if (explore.score%5==0 && explore.score%3==0){
+            explore.trick="FIZZBUZZ"
         }
         else if(explore.score%5==0){
-            explore.assign(trick,"BUZZ")
+            explore.trick="BUZZ"
         }
         
-        else if(explore.score%3==0 && explore.score%5==0){
-            explore.assign(trick,"FIZZBUZZ")
+        else if(explore.score%3==0){
+            explore.trick="FIZZ"
         }
         else{
-            explore.assign(trick,explore.score)
+            explore.trick=explore.score
         }
+        return explore
     }
 }
+
+module.exports = FizzbuzzService
