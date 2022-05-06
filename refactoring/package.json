@@ -1,0 +1,11 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "description": "Proyecto 1 Semana 4 LaunchX NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Martin",
+  "license": "ISC"
+}
