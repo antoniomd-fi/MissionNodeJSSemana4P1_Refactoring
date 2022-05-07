@@ -4,7 +4,7 @@ const ExploreController= require("./../../lib/controllers/ExplorerController");
 describe ("Tests for ExplorerController", () =>{
 
     test ("1. Filter By Mission" , ()=> {
-        const explorersInMission = ExploreController.getExplorersByMission("node")
+        const explorersInMission = ExploreController.getExplorersByMission("node");
         expect(explorersInMission[0].mission).toBe("node");
         expect(explorersInMission[1].mission).toBe("node");
         expect(explorersInMission[2].mission).toBe("node");
@@ -19,7 +19,7 @@ describe ("Tests for ExplorerController", () =>{
     });
 
     test ("3. Explorers usernames" , ()=> {
-        const explorersInMission = ExplorerController.getExplorersUsernamesByMission("java")
+        const explorersInMission = ExplorerController.getExplorersUsernamesByMission("java");
         expect(explorersInMission[0]).toBe("ajolonauta6");
         expect(explorersInMission[1]).toBe("ajolonauta7");
         expect(explorersInMission[2]).toBe("ajolonauta8");
