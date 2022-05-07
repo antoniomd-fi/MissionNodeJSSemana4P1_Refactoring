@@ -1,4 +1,4 @@
-const Reader = require('./../../lib/utils/Reader')
+const Reader = require("./../../lib/utils/Reader");
 
 describe ("Tests for Reader", () =>{
 
@@ -9,16 +9,16 @@ describe ("Tests for Reader", () =>{
             "score": 1,
             "mission": "node",
             "stacks": [
-              "javascript",
-              "reasonML",
-              "elm"
+                "javascript",
+                "reasonML",
+                "elm"
             ]
-          }
-        const explorer2 = Reader.readJsonFile("explorers.json")
-        expect(explorer2[0].name).toBe(explorer.name)
-        expect(explorer2[0].githubUsername).toBe(explorer.githubUsername)
-        expect(explorer2[0].score).toBe(explorer.score)
-        expect(explorer2[0].mission).toBe(explorer.mission)
+        };
+        const explorer2 = Reader.readJsonFile("explorers.json");
+        expect(explorer2[0].name).toBe(explorer.name);
+        expect(explorer2[0].githubUsername).toBe(explorer.githubUsername);
+        expect(explorer2[0].score).toBe(explorer.score);
+        expect(explorer2[0].mission).toBe(explorer.mission);
     });
     
-})
+});
