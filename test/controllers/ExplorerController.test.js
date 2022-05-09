@@ -1,3 +1,4 @@
+const FizzbuzzService = require("../../lib/services/FizzbuzzService");
 const ExplorerController = require("./../../lib/controllers/ExplorerController");
 const ExploreController= require("./../../lib/controllers/ExplorerController");
 
@@ -26,4 +27,14 @@ describe ("Tests for ExplorerController", () =>{
         expect(explorersInMission[3]).toBe("ajolonauta9");
         expect(explorersInMission[4]).toBe("ajolonauta10");
     });
+
+    test ("4. Trick by Number" , ()=> {
+        const trick = ExplorerController.getExplorerTrickByNumber(3);
+        const trick2 = ExplorerController.getExplorerTrickByNumber(5);
+        const trick3 = ExplorerController.getExplorerTrickByNumber(15);
+        expect(trick).toBe("FIZZ");
+        expect(trick2).toBe("BUZZ");
+        expect(trick3).toBe("FIZZBUZZ");
+    });
+
 });
