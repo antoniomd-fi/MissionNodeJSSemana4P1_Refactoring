@@ -26,5 +26,14 @@ describe ("Tests for Reader", () =>{
         const explore1 = FizzbuzzService.applyValidationInExplorer(explorers[14]);
         expect(explore1.trick).toBe("FIZZBUZZ");
     });
+
+    test ("5. Get trick by Number" , ()=> {
+        const trick = FizzbuzzService.applyValidationInNumber(3);
+        const trick2 = FizzbuzzService.applyValidationInNumber(5);
+        const trick3 = FizzbuzzService.applyValidationInNumber(15);
+        expect(trick).toBe("FIZZ");
+        expect(trick2).toBe("BUZZ");
+        expect(trick3).toBe("FIZZBUZZ");
+    });
     
 });
